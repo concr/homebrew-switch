@@ -13,7 +13,9 @@ cask "dbi-installer@en" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :github_latest do |json|
+      "#{json["tag_name"]},#{lang}" if json["tag_name"]&.match?(/^\d+$/)
+    end
   end
 
   depends_on cask: "dbi-installer@#{lang}-base"
