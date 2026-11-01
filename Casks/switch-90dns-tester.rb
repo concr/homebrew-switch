@@ -14,6 +14,11 @@ cask "switch-90dns-tester" do
   end
 
   artifact "Switch_90DNS_tester.nro",
-    target: "#{Dir.home}/Documents/switch/switch-90dns-tester/switch-90dns-tester-#{version}.nro"
+    target: "#{Dir.home}/Documents/switch/switch-90dns-tester/switch-90dns-tester.nro"
+
+  postflight_steps do
+    write_file "#{Dir.home}/Documents/switch/switch-90dns-tester/switch-90dns-tester.txt", "#{version}\n"
+  end
+
 
 end

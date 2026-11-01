@@ -14,6 +14,10 @@ cask "aio-switch-updater" do
   end
 
   artifact "./switch/aio-switch-updater/aio-switch-updater.nro",
-    target: "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater-#{version}.nro"
+    target: "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.nro"
+
+  postflight_steps do
+    write_file "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.txt", "#{version}\n"
+  end
 
 end
