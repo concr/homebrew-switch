@@ -26,7 +26,7 @@ cask "dbi-installer@en" do
       network_access: true
     
     # curl -sL https://github.com/rashevskyv/DBIPatcher/releases/download/921/translation_en.bin | sha256sum
-    write "translation.sha256", "5c8052362b5dd9b0a9255dfa740a1bee0151f2f22d57dabaf0b19722e118ed13  translation.bin\n"
+    write_file "translation.sha256", "5c8052362b5dd9b0a9255dfa740a1bee0151f2f22d57dabaf0b19722e118ed13  translation.bin\n"
     
     run "/sbin/sha256sum",
       args: [ "-c", "translation.sha256" ],
