@@ -13,15 +13,15 @@ cask "nx-shell" do
     strategy :github_latest
   end
 
-  artifact "NS-Shell.nro",
+  artifact "NX-Shell.nro",
     target: "#{Dir.home}/Documents/switch/nx-shell/nx-shell.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/nx-shell/ns-shell.txt", "#{version}\n"
+    write_file "#{Dir.home}/Documents/switch/nx-shell/nx-shell.txt", "#{version}\n"
   end
 
   uninstall delete: [
-    "#{Dir.home}/Documents/switch/nx-shell/ns-shell.txt",
+    "#{Dir.home}/Documents/switch/nx-shell/nx-shell.txt",
   ]
 
   uninstall rmdir: [
