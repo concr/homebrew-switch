@@ -14,13 +14,13 @@ cask "nx-shell" do
   end
 
   artifact "NX-Shell.nro",
-    target: "#{Dir.home}/Documents/switch/nx-shell/nx-shell.nro"
+    target: "#{Dir.home}/Documents/switch-sd/switch/nx-shell/nx-shell.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/nx-shell/nx-shell.txt", "#{version}\n"
+    write_file "#{Dir.home}/Documents/switch-sd/switch/nx-shell/nx-shell.txt", "#{version}\n"
   end
 
-  uninstall delete: "#{Dir.home}/Documents/switch/nx-shell/nx-shell.txt",
-            rmdir:  "#{Dir.home}/Documents/switch/nx-shell"
+  uninstall delete: "#{Dir.home}/Documents/switch-sd/switch/nx-shell/nx-shell.txt",
+            rmdir:  "#{Dir.home}/Documents/switch-sd/switch/nx-shell"
 
 end

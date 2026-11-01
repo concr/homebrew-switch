@@ -20,10 +20,10 @@ cask "jksv" do
     target: "#{Dir.home}/Documents/switch/jksv/jksv.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/jksv/jksv.txt", "#{version}\n"
+    write_file "#{Dir.home}/Documents/switch-sd/switch/jksv/jksv.txt", "#{version}\n"
   end
 
-  uninstall delete: "#{Dir.home}/Documents/switch/jksv/jksv.txt",
-            rmdir:  "#{Dir.home}/Documents/switch/jksv"
+  uninstall delete: "#{Dir.home}/Documents/switch-sd/switch/jksv/jksv.txt",
+            rmdir:  "#{Dir.home}/Documents/switch-sd/switch/jksv"
   
 end

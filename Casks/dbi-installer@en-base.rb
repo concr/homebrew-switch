@@ -18,16 +18,18 @@ cask "dbi-installer@en-base" do
     end
   end
 
-  # depends_on cask: "dbi-installer-localization@#{lang}-translation"
+  conflicts_with cask: "dbi-installer"
+  conflicts_with cask: "dbi-installer@de"
+  conflicts_with cask: "dbi-installer@de-base"
 
   artifact "DBI.nro",
-    target: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.nro"
+    target: "#{Dir.home}/Documents/switch-sd/switch/dbi/dbi.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "#{tag},#{lang}\n"
+    write_file "#{Dir.home}/Documents/switch-sd/switch/dbi/dbi.txt", "#{tag},#{lang}\n"
   end
 
-  uninstall delete: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt",
-            rmdir:  "#{Dir.home}/Documents/switch/dbi-#{lang}"
+  uninstall delete: "#{Dir.home}/Documents/switch-sd/switch/dbi/dbi.txt",
+            rmdir:  "#{Dir.home}/Documents/switch-sd/switch/dbi"
 
 end

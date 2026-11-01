@@ -13,14 +13,14 @@ cask "aio-switch-updater" do
     strategy :github_latest
   end
 
-  artifact "./switch/aio-switch-updater/aio-switch-updater.nro",
-    target: "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.nro"
+  artifact "./switch-sd/switch/aio-switch-updater/aio-switch-updater.nro",
+    target: "#{Dir.home}/Documents/switch-sd/switch/aio-switch-updater/aio-switch-updater.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.txt", "#{version}\n"
+    write_file "#{Dir.home}/Documents/switch-sd/switch/aio-switch-updater/aio-switch-updater.txt", "#{version}\n"
   end
 
-  uninstall delete: "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.txt",
-            rmdir:  "#{Dir.home}/Documents/switch/aio-switch-updater"
+  uninstall delete: "#{Dir.home}/Documents/switch-sd/switch/aio-switch-updater/aio-switch-updater.txt",
+            rmdir:  "#{Dir.home}/Documents/switch-sd/switch/aio-switch-updater"
 
 end
