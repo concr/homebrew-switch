@@ -1,9 +1,12 @@
 cask "dbi-installer-localization@de-base" do
 
-  version "921"
+  version "921,de"
   sha256 "ec6178016caf494d453701ed72397d06b039a2b5bf359a6ac28120be8494ecb5"
 
-  url "https://github.com/rashevskyv/DBIPatcher/releases/download/#{version}/DBI.nro"
+  tag = version.csv.first
+  lang = version.csv.second
+
+  url "https://github.com/rashevskyv/DBIPatcher/releases/download/#{tag}/DBI.nro"
   name "DBI Installer (Localization) Base"
   desc "Ultimate solution to install NSP, NSZ, XCI and XCZ files along with many advanced features."
   homepage "https://github.com/rashevskyv/DBIPatcher"
@@ -13,14 +16,13 @@ cask "dbi-installer-localization@de-base" do
     strategy :github_latest
   end
 
-  depends_on cask: "dbi-installer-localization@de-translation"
-  conflicts_with cask: "dbi-installer-localization@en-base"
+  depends_on cask: "dbi-installer-localization@#{lang}-translation"
 
   artifact "DBI.nro",
-    target: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi-#{lang}.nro"
+    target: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi-#{lang}.txt", "#{version}\n"
+    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "#{tag}#{lang}\n"
   end
 
 end
