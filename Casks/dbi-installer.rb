@@ -39,5 +39,4 @@ cask "dbi-installer" do
     "#{Dir.home}/Documents/switch/dbi-#{lang}",
   ]
 
-
 end

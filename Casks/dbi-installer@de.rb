@@ -25,8 +25,11 @@ cask "dbi-installer@de" do
     write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.txt", "#{tag},#{lang}\n"
   end
 
-  zap trash: [
+  uninstall delete: [
     "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.txt",
+  ]
+
+  uninstall rmdir: [
     "#{Dir.home}/Documents/switch/dbi-#{lang}",
   ]
 
