@@ -16,7 +16,7 @@ cask "dbi-installer@de" do
     strategy :github_latest
   end
 
-  depends_on cask: "dbi-installer-localization@#{lang}-base"
+  depends_on cask: "dbi-installer@#{lang}-base"
 
   artifact "translation_#{lang}.bin",
     target: "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.bin"
