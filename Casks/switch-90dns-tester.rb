@@ -20,12 +20,7 @@ cask "switch-90dns-tester" do
     write_file "#{Dir.home}/Documents/switch/switch-90dns-tester/switch-90dns-tester.txt", "#{version}\n"
   end
 
-  uninstall delete: [
-    "#{Dir.home}/Documents/switch/switch-90dns-tester/switch-90dns-tester.txt",
-  ]
-
-  uninstall rmdir: [
-    "#{Dir.home}/Documents/switch/switch-90dns-tester",
-  ]
+  uninstall delete: "#{Dir.home}/Documents/switch/switch-90dns-tester/switch-90dns-tester.txt",
+            rmdir:  "#{Dir.home}/Documents/switch/switch-90dns-tester"
 
 end

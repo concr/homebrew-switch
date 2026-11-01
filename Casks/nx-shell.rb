@@ -20,12 +20,7 @@ cask "nx-shell" do
     write_file "#{Dir.home}/Documents/switch/nx-shell/nx-shell.txt", "#{version}\n"
   end
 
-  uninstall delete: [
-    "#{Dir.home}/Documents/switch/nx-shell/nx-shell.txt",
-  ]
-
-  uninstall rmdir: [
-    "#{Dir.home}/Documents/switch/nx-shell",
-  ]
+  uninstall delete: "#{Dir.home}/Documents/switch/nx-shell/nx-shell.txt",
+            rmdir:  "#{Dir.home}/Documents/switch/nx-shell"
 
 end

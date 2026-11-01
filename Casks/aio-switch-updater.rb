@@ -20,12 +20,7 @@ cask "aio-switch-updater" do
     write_file "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.txt", "#{version}\n"
   end
 
-  uninstall delete: [
-    "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.txt",
-  ]
-
-  uninstall rmdir: [
-    "#{Dir.home}/Documents/switch/aio-switch-updater",
-  ]
+  uninstall delete: "#{Dir.home}/Documents/switch/aio-switch-updater/aio-switch-updater.txt",
+            rmdir:  "#{Dir.home}/Documents/switch/aio-switch-updater"
 
 end

@@ -25,12 +25,7 @@ cask "dbi-installer@en-base" do
     write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "#{tag},#{lang}\n"
   end
 
-  uninstall delete: [
-    "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt",
-  ]
-
-  uninstall rmdir: [
-    "#{Dir.home}/Documents/switch/dbi-#{lang}",
-  ]
+  uninstall delete: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt",
+            rmdir:  "#{Dir.home}/Documents/switch/dbi-#{lang}"
 
 end
