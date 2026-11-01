@@ -1,4 +1,4 @@
-cask "dbi-installer-localization@en-translation" do
+cask "dbi-installer@en" do
 
   version "921,en"
   sha256 "5c8052362b5dd9b0a9255dfa740a1bee0151f2f22d57dabaf0b19722e118ed13"

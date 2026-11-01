@@ -1,6 +1,6 @@
-cask "dbi-installer-localization@de-base" do
+cask "dbi-installer@en-base" do
 
-  version "921,de"
+  version "921,en"
   sha256 "ec6178016caf494d453701ed72397d06b039a2b5bf359a6ac28120be8494ecb5"
 
   tag = version.csv.first
