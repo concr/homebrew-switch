@@ -1,4 +1,4 @@
-cask "xxx-switch-90dns-tester" do
+cask "switch-90dns-tester" do
 
   version "1.1.0"
   sha256 "0ce5c67e93983f14161148b8796726ebf6b4f86ffb77b49b842fe017c7e5fd14"
@@ -13,11 +13,7 @@ cask "xxx-switch-90dns-tester" do
     strategy :github_latest
   end
 
-  app "Switch_90DNS_tester.nro", target: "#{ENV.fetch("HOME")}/Documents/switch-apps/switch-90dns-tester-#{version}.nro"
-
-  #postflight_steps do
-  #  run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"]
-  #  run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
-  #end
+  app "Switch_90DNS_tester.nro",
+    target: "#{ENV.fetch("HOME")}/Documents/switch-apps/switch-90dns-tester-#{version}.nro"
 
 end
