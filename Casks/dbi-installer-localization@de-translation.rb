@@ -1,7 +1,7 @@
 cask "dbi-installer-localization@de-translation" do
 
   version "921,de"
-  sha256 "5c8052362b5dd9b0a9255dfa740a1bee0151f2f22d57dabaf0b19722e118ed13"
+  sha256 "fe0ca0c0894c6f4a7ebaf93642e56138ec92b1af95c2e122d79d2dc25f7d255f"
 
   tag = version.csv.first
   lang = version.csv.second
