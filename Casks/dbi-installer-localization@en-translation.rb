@@ -6,7 +6,7 @@ cask "dbi-installer-localization@en-translation" do
   tag = version.csv.first
   lang = version.csv.second
 
-  url "https://github.com/rashevskyv/DBIPatcher/releases/download/#{tag}/translation_en.bin"
+  url "https://github.com/rashevskyv/DBIPatcher/releases/download/#{tag}/translation_#{lang}.bin"
   name "DBI Installer (Localization) English Translation"
   desc "Ultimate solution to install NSP, NSZ, XCI and XCZ files along with many advanced features."
   homepage "https://github.com/rashevskyv/DBIPatcher"
