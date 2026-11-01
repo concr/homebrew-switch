@@ -22,7 +22,7 @@ cask "dbi-installer@en" do
   postflight_steps do
     run "/usr/bin/curl",
       args: [ "-fsSL", "-o", "translation.bin", "https://github.com/rashevskyv/DBIPatcher/releases/download/#{tag}/translation_#{lang}.bin" ],
-      chdir: "#{Dir.home}/Documents/switch/dbi-#{lang}",
+      chdir: ".",
       network_access: true
     
     # curl -sL https://github.com/rashevskyv/DBIPatcher/releases/download/921/translation_en.bin | sha256sum
@@ -30,7 +30,7 @@ cask "dbi-installer@en" do
     
     run "/sbin/sha256sum",
       args: [ "-c", "translation.sha256" ],
-      chdir: "#{Dir.home}/Documents/switch/dbi-#{lang}"
+      chdir: "."
   end
 
 end
