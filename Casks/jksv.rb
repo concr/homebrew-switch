@@ -12,7 +12,7 @@ cask "jksv" do
     url :url
     strategy :github_latest do |json|
       month, day, year = json["tag_name"]&.split("/")
-      "#{year}.#{month}.#{day}" if year
+      "#{month}.#{day}.#{year}" if year
     end
   end
 
