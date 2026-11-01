@@ -14,6 +14,6 @@ cask "switch-90dns-tester" do
   end
 
   app "Switch_90DNS_tester.nro",
-    target: "#{ENV.fetch("HOME")}/Documents/switch-apps/switch-90dns-tester-#{version}.nro"
+    target: "#{ENV.fetch("HOME")}/Documents/switch/switch-90dns-tester/switch-90dns-tester-#{version}.nro"
 
 end

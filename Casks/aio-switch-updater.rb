@@ -13,7 +13,7 @@ cask "aio-switch-updater" do
     strategy :github_latest
   end
 
-  app "aio-switch-updater.zip",
-    target: "#{ENV.fetch("HOME")}/Documents/switch-apps/aio-switch-updater-#{version}.nro"
+  app "./switch/aio-switch-updater/aio-switch-updater.nro",
+    target: "#{ENV.fetch("HOME")}/Documents/switch/aio-switch-updater/aio-switch-updater-#{version}.nro"
 
 end
