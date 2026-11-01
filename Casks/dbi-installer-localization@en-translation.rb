@@ -17,7 +17,6 @@ cask "dbi-installer-localization@en-translation" do
   end
 
   depends_on cask: "dbi-installer-localization@#{lang}-base"
-  conflicts_with cask: "dbi-installer-localization@de-translation"
 
   artifact "translation_#{lang}.bin",
     target: "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.bin"

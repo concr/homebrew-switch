@@ -16,8 +16,7 @@ cask "dbi-installer-localization@en-base" do
     strategy :github_latest
   end
 
-  depends_on cask: "dbi-installer-localization@#{lang}-translation"
-  conflicts_with cask: "dbi-installer-localization@de-base"
+  # depends_on cask: "dbi-installer-localization@#{lang}-translation"
 
   artifact "DBI.nro",
     target: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.nro"
