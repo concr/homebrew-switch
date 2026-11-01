@@ -31,7 +31,7 @@ cask "dbi-installer" do
     write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "#{tag},#{lang}\n"
   end
 
-  zap trash: [
+  uninstall delete: [
     "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt",
     "#{Dir.home}/Documents/switch/dbi-#{lang}",
   ]
