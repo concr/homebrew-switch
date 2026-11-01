@@ -22,7 +22,12 @@ cask "dbi-installer@en" do
     target: "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.bin"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.txt", "#{tag}#{lang}\n"
+    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.txt", "#{tag},#{lang}\n"
   end
+
+  zap trash: [
+    "#{Dir.home}/Documents/switch/dbi-#{lang}/translation.txt",
+    "#{Dir.home}/Documents/switch/dbi-#{lang}",
+  ]
 
 end

@@ -11,7 +11,7 @@ cask "dbi-installer" do
   desc "Ultimate solution to install NSP, NSZ, XCI and XCZ files along with many advanced features."
   homepage "https://github.com/rashevskyv/DBIPatcher"
 
-livecheck do
+  livecheck do
     url :url
     regex(/^(\d+)(#{lang})$/i)
     strategy :github_releases do |json, regex|
@@ -28,7 +28,12 @@ livecheck do
     target: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "#{tag}#{lang}\n"
+    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "#{tag},#{lang}\n"
   end
+
+  zap trash: [
+    "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt",
+    "#{Dir.home}/Documents/switch/dbi-#{lang}",
+  ]
 
 end
