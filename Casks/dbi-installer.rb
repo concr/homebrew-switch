@@ -33,7 +33,11 @@ cask "dbi-installer" do
 
   uninstall delete: [
     "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt",
+  ]
+
+  uninstall rmdir: [
     "#{Dir.home}/Documents/switch/dbi-#{lang}",
   ]
+
 
 end
