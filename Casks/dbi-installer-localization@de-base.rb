@@ -13,8 +13,7 @@ cask "dbi-installer-localization@de-base" do
     strategy :github_latest
   end
 
-  depends_on "dbi-installer-localization@de-translation"
-  
+  depends_on cask: "dbi-installer-localization@de-translation"
   conflicts_with cask: "dbi-installer-localization@en-base"
 
   artifact "DBI.nro",
