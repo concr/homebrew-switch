@@ -1,4 +1,4 @@
-cask "dbi-installer-localization@de-base" do
+cask "dbi-installer-localization@de-translation" do
 
   version "921"
   sha256 "5c8052362b5dd9b0a9255dfa740a1bee0151f2f22d57dabaf0b19722e118ed13"
@@ -13,7 +13,7 @@ cask "dbi-installer-localization@de-base" do
     strategy :github_latest
   end
 
-  depends_on "dbi-installer-localization@de-translation"
+  depends_on "dbi-installer-localization@de-base"
   
   conflicts_with cask: "dbi-installer-localization@en-translation"
 
