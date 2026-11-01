@@ -21,7 +21,7 @@ cask "dbi-installer@en" do
 
   postflight_steps do
     run "/usr/bin/curl",
-      args: [ "-fsSL", "-o", "translation.bin", "#{homepage}/releases/download/#{tag}/translation_#{lang}.bin" ],
+      args: [ "-fsSL", "-o", "translation.bin", "https://github.com/rashevskyv/DBIPatcher/releases/download/#{tag}/translation_#{lang}.bin" ],
       chdir: "#{Dir.home}/Documents/switch/dbi-#{lang}",
       network_access: true
     
