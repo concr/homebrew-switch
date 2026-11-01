@@ -22,7 +22,7 @@ cask "dbi-installer-localization@en-base" do
     target: "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.nro"
 
   postflight_steps do
-    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "##{tag}#{lang}\n"
+    write_file "#{Dir.home}/Documents/switch/dbi-#{lang}/dbi.txt", "#{tag}#{lang}\n"
   end
 
 end
